@@ -1,0 +1,160 @@
+
+\documentclass{article}
+
+% Packages provide additional typesetting options
+\usepackage{amsmath, amsthm, amssymb, amsfonts, graphicx}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{note}[thm]{Note}
+\theoremstyle{remark}
+\newtheorem{remark}[thm]{Remark}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}
+
+\title{MATH 3163 -- Proof Portfolio}
+\author{Alex Onghena}
+\date{Fall 2018}
+%\date{\today}
+
+
+\begin{document}
+\maketitle
+%\begin{abstract}
+%\noindent
+%
+%\end{abstract}
+
+%\section{Remove Me}
+%You do not need to include any definitions, theorems, etc. from the text. The definitions here are standard, but it is courteous to provide your reader with the reference you most often use:
+%\begin{quote}
+%See \cite{TheHungerfordGames} for any undefined terms.
+%\end{quote}
+%Even if you don't state the theorems (I'll let you know when I think you should), you should reference them. Any theorem, definition, etc. without reference is assumed to be from \emph{this} document. See Theorem \ref{thm:1} for an example of referencing theorems from the textbook.
+%You might need to compile your source code twice for the references to set. If you see \ref{badRef} in place of a reference, then try compiling again.
+%Use \% to comment text (make invisible to the compiler). You might find it useful to keep things (in comments) rather than to delete them.
+
+\section{Statements and Proofs Overview}
+
+Included here are proofs of the following:
+
+\begin{itemize}
+\item $(a,b) = 1$ if and only if there is no prime $p$ such that $p|a$ and $p|b$.
+\item $a|b$ if and only if $a^n|b^n$
+\item Show that the the set S of martices of the form \begin{bmatrix}a & 4b\\b & a \end{bmatrix}, with a and b real numbers is a subring $M(${\rm I\!R}$)$ \\
+\end{itemize}
+
+\section{Proof 1}
+
+\begin{definition}\label{def}
+An integer $p$ is said to be prime if $p \neq 0, \pm 1$ and the only divisor of $p$ are $\pm 1$ and $\pm p$\\
+\end{definition}
+\begin{thm}
+$(a,b) = 1$ if and only if there is no prime $p$ such that $p|a$ and $p|b$\\
+\end{thm}
+\begin{proof}
+Let $a$ and $b$ be integers. Lets now assume that $(a,b) > 1$. There then exists integer $x$ such that $x = (a,b)$ where $x \geq 1$ and $x|a$ and $x|b$. \\\\
+$p|x$ and $x|b$, $x|b$\\
+Then $p|a$ as well as $p|b$\\
+Shows that there exists integer prime p that will divide x. \\\\
+ $p|a$, $p|b$ for $(a,b) \geq 1$.\\
+This shows there exists a prime.\\ \\
+There is no value of $p$ such that $p|a$ and $p|b$ besides $p =$ $\pm 1$.\\
+By the definition of prime $\pm 1$ is not prime.
+\\
+\begin{remark}
+This is a farily straight foward proof. Using the definition of a prime number we are able to show that the integers $a$ and $b$ have no prime $p$ that divides them both.
+\end{remark}
+
+\end{proof}
+
+
+
+
+\section{Proof 2}
+
+
+
+
+\begin{thm}\label{thm}
+$a|b$ if and only if $a^n|b^n$\end{thm}
+\begin{proof}
+Let $a$ and $b$ be integers. Let $n \geq 1$.  \\ \\ Let P(n) be the statement $a^n|b^n$ \\ \\
+\\ Base Case $n = 1$:
+\\ $a|b$ then ${a^1}|{b^1}$ or $P(1)$.
+\\ let $k = n$.\\ \\we now show $P(k)$ then $P(k+1)$\\
+${a^k}|{b^k}$ then ${a^{k+1}}|{b^{k+1}}$\\ \\
+We will now expand upon the following equations and re-write them.\\
+\begin{equation*}
+\begin{split}
+{a^k}|{b^k} \ as \ {b^k} = {a^k} \times n\\
+a|b \ as \ b = a \times l\\
+{a^{k+1}|b^{k+1}} \ as \ b^{k+1} = a^{k+1} \times m
+\end{split}
+\end{equation*}
+\\ \\Now we will multiply P(k) * b\\
+\begin{align*}
+b \times {b^k} = ({a^k} \times m) \times b \\
+{b^k+1} = ({a^k} \times m) \times (al) \\
+{b^k+1} = {a^k+1} \times m \times l \\
+\end{align*}
+\\We can re-write this as the following: ${b^{k+1}}|{a^{k+1}}$
+\\\\We will now have to show that $a^n|b^n$ if and only if $a|b$ 
+\\
+\\
+From above we know that:\\
+$a|b$ \ as \ b = a \times l\\
+${a^n}|{b^n}$ \ as \ ${b^n} = {a^n}$ $\times x$\\
+we can re-write the following in terms of $a|b$\\
+${{(a \times l)}^n} = {a^n}$ $\times x$\\
+${l}^n = x$
+\\From this we have shown ${a^k}|{b^k}$ then ${a}|{b}$
+\\\\
+We have can now conclude with $a|b$ if and only if $a^n|b^n$
+
+\end{proof}
+
+
+
+
+\section{Proof 3}
+\begin{thm}\label{thm}
+Show that the the set S of martices of the form $\begin{bmatrix}a & 4b\\b & a \end{bmatrix}$, with a and b real numbers is a subring $M(${\rm I\!R}$)$\end{thm}
+\begin{proof}
+Using Theorm 3.6 we will be able to prove that \begin{bmatrix}a & 4b\\b & a \end{bmatrix} is a subring of $M(${\rm I\!R}$)$
+\\
+Let T = \begin{bmatrix}a & 4b\\b & a \end{bmatrix}
+\\\\
+Let a,b,c,d be real numbers
+\\\\
+1) T is nonempty. \begin{bmatrix}a & 4b\\b & a \end{bmatrix} \begin{bmatrix}a & 4b\\b & a \end{bmatrix} = $\begin{bmatrix}a & 4b\\b & a \end{bmatrix}^2$ $\in$ M
+\\
+2) show T is closed under subtraction.
+\\
+\begin{bmatrix}a & 4b\\b & a \end{bmatrix} - \begin{bmatrix}c & 4d\\d & c \end{bmatrix} = 
+\begin{bmatrix}a-c & 4b+4d\\b-d & a-c\end{bmatrix}=
+\begin{bmatrix}a-c & 4(b+d)\\b-d & a-c\end{bmatrix}$\in$ T\\\\
+3) show T is closed under multiplication.\\
+\begin{bmatrix}a & 4b\\b & a \end{bmatrix} \begin{bmatrix}c & 4d\\d & c \end{bmatrix}= 
+\begin{bmatrix}ac+4db & 4ad+4bc\\bc+ad & 4bd+ac\end{bmatrix}=
+\begin{bmatrix}ac+4db & 4(ad+bc)\\bc+ad & 4bd+ac\end{bmatrix}$\in$ T\\\\
+Since T has closure under subtraction, multiplication and is nonempty. By theorm 3.6 T is a subring of $M(${\rm I\!R}$)$.\\
+
+\begin{remark} \textbf{}
+Using Theorm 3.6 we were able to show that T is a subring of $M(${\rm I\!R}$)$.
+\end{remark}
+\end{proof}
+
+\begin{thebibliography}{10}
+
+\bibitem{TheHungerfordGames} T. W. Hungerford. \emph{Abstract Algebra: An Introduction} (3rd Ed.). Brooks/Cole, Boston, 2014.
+
+\end{thebibliography}
+
+\end{document}
