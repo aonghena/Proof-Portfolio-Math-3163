@@ -1,4 +1,3 @@
-
 \documentclass{article}
 
 % Packages provide additional typesetting options
@@ -59,13 +58,13 @@ An integer $p$ is said to be prime if $p \neq 0, \pm 1$ and the only divisor of 
 $(a,b) = 1$ if and only if there is no prime $p$ such that $p|a$ and $p|b$\\
 \end{thm}
 \begin{proof}
-Let $a$ and $b$ be integers. Lets now assume that $(a,b) > 1$. There then exists integer $x$ such that $x = (a,b)$ where $x \geq 1$ and $x|a$ and $x|b$. \\\\
+Let $a$ and $b$ be integers. Lets now assume that $(a,b) > 1$ to show that there is a prime. There then exists integer $x$ such that $x = (a,b)$ where $x > 1$ and $x|a$ and $x|b$. \\\\
 $p|x$ and $x|b$, $x|b$\\
 Then $p|a$ as well as $p|b$\\
-Shows that there exists integer prime p that will divide x. \\\\
- $p|a$, $p|b$ for $(a,b) \geq 1$.\\
-This shows there exists a prime.\\ \\
-There is no value of $p$ such that $p|a$ and $p|b$ besides $p =$ $\pm 1$.\\
+This shows that there exists integer prime p that will divide x. \\\\
+ $p|a$, $p|b$ for $(a,b) > 1$.\\
+This shows there exists a prime that will divide both numbers.\\ \\
+$(a,b) = 1$ here there is no value of $p$ such that $p|a$ and $p|b$ besides $p =$ $\pm 1$.\\
 By the definition of prime $\pm 1$ is not prime.
 \\
 \begin{remark}
@@ -85,41 +84,24 @@ This is a farily straight foward proof. Using the definition of a prime number w
 \begin{thm}\label{thm}
 $a|b$ if and only if $a^n|b^n$\end{thm}
 \begin{proof}
-Let $a$ and $b$ be integers. Let $n \geq 1$.  \\ \\ Let P(n) be the statement $a^n|b^n$ \\ \\
-\\ Base Case $n = 1$:
-\\ $a|b$ then ${a^1}|{b^1}$ or $P(1)$.
-\\ let $k = n$.\\ \\we now show $P(k)$ then $P(k+1)$\\
-${a^k}|{b^k}$ then ${a^{k+1}}|{b^{k+1}}$\\ \\
-We will now expand upon the following equations and re-write them.\\
-\begin{equation*}
-\begin{split}
-{a^k}|{b^k} \ as \ {b^k} = {a^k} \times n\\
-a|b \ as \ b = a \times l\\
-{a^{k+1}|b^{k+1}} \ as \ b^{k+1} = a^{k+1} \times m
-\end{split}
-\end{equation*}
-\\ \\Now we will multiply P(k) * b\\
-\begin{align*}
-b \times {b^k} = ({a^k} \times m) \times b \\
-{b^k+1} = ({a^k} \times m) \times (al) \\
-{b^k+1} = {a^k+1} \times m \times l \\
-\end{align*}
-\\We can re-write this as the following: ${b^{k+1}}|{a^{k+1}}$
-\\\\We will now have to show that $a^n|b^n$ if and only if $a|b$ 
-\\
-\\
-From above we know that:\\
-$a|b$ \ as \ b = a \times l\\
-${a^n}|{b^n}$ \ as \ ${b^n} = {a^n}$ $\times x$\\
-we can re-write the following in terms of $a|b$\\
-${{(a \times l)}^n} = {a^n}$ $\times x$\\
-${l}^n = x$
-\\From this we have shown ${a^k}|{b^k}$ then ${a}|{b}$
+Let a and b be integers.\\\\
+Part 1\\ \\
+Suppose $a|b$ \\
+$a|b$ can be rewriten as
+\\ $b=a \times l$
+\\ $b^n=a^n \times l^n$\\
+$a^n|b^n$\\\\
+\\Part 2\\
+\\We will now suppose that $a^n|b^n$ for any integer n.
+\\We will now let n = 1.\\
+$a^n|b^n$\\
+$a^1|b^1$\\
+$a|b$\\
 \\\\
 We have can now conclude with $a|b$ if and only if $a^n|b^n$
 
 \end{proof}
-
+ 
 
 
 
